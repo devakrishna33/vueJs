@@ -1,6 +1,11 @@
 new Vue({
   el: "#app",
   data: {
-    message: "Hello World!",
+    name: "Doctor",
+  },
+  methods: {
+    greet: function(time){
+      return "Good " + time + " " + this.name;
+    },
   },
 });
