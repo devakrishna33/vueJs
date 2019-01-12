@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{title}}</h1>
-    <p>{{greeting()}}</p>
+    <doctors></doctors>
   </div>
 </template>
 
@@ -12,11 +12,6 @@ export default {
       title: "First Vue app with cli"
     }
   },
-  methods: {
-    greeting: function(){
-      return "Hello World!!!"
-    }
-  }
 }
 </script>
 
