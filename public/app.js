@@ -4,6 +4,7 @@ new Vue({
     name: "Doctor",
     x: 0,
     y: 0,
+    message: '',
   },
   methods: {
     greet: function(time){
@@ -27,5 +28,10 @@ new Vue({
     reverseName: function(){
       return this.name.split('').reverse().join('');
     },
-  }
+  },
+  watch: {
+    name: function(){
+      this.message = "Name is changing to "+this.name;
+    },
+  },
 });
