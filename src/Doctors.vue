@@ -1,9 +1,12 @@
 <template>
-  <ul>
-    <li v-for="doctor in doctors">
-      {{doctor}}
-    </li>
-  </ul>
+  <div>
+    <h1>List of doctors!</h1>
+    <ul>
+      <li v-for="doctor in doctors">
+        {{doctor}}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -15,3 +18,9 @@
     }
   };
 </script>
+
+<style scoped>
+  h1{
+    color: red;
+  }
+</style>
