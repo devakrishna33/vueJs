@@ -6,6 +6,7 @@
         <h3 v-show="doctor.show">{{doctor.speciality}}</h3>
       </li>
     </ul>
+    <button type="button" @click="deleteDoctor">Delete Doctor</button>
   </div>
 </template>
 
@@ -20,6 +21,11 @@
     data(){
       return{
 
+      }
+    },
+    methods: {
+      deleteDoctor: function(){
+        this.doctors.pop();
       }
     }
   };

@@ -1,18 +1,28 @@
 <template>
   <div>
     <header>
-      <h1>{{title}}</h1>
+      <h1 @click='changeTitle()'>{{title}}</h1>
     </header>
   </div>
 </template>
 
 <script>
 export default{
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
   data(){
     return {
-      title: 'Doctors'
     };
   },
+  methods: {
+    changeTitle: function() {
+      this.title = "Doctor Who!"
+    }
+  }
 }
 </script>
 

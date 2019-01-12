@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header :title="title"></app-header>
     <doctors :doctors="doctors"></doctors>
-    <app-footer></app-footer>
+    <app-footer :title="title"></app-footer>
   </div>
 </template>
 
@@ -25,6 +25,7 @@ export default {
         {name: 'Matt Smith', speciality: 'Running', show: false, },
         {name: 'David Tennant', speciality: 'Hair', show:false, },
       ],
+      title: 'Doctor'
     }
   },
 }
