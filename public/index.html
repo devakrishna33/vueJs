@@ -8,18 +8,15 @@
   </head>
   <body>
     <div id="app">
-      <input v-model="name"/>
-      <br/>
-      <button @click="changeName">Change name</button>
-      <button @click="changeColor">Change color</button>
-      <h1 :class="{red: red, blue: blue, message: true}">{{message}}</h1>
-      <h1>{{ greet() }}</h1>
-      <h1>Reversed name = "{{reverseName}}"</h1>
-      <div @mousemove="move" id="canvas">
-        {{x}},{{y}}
-      </div>
-      <br/>
-      <a href="https://google.co.in" @click.prevent="clicked">Google</a>
+      <h1>Conditionals</h1>
+      <button @click="error=!error">Toggle Error</button>
+      <button @click="success=!success">Toggle success</button>
+      <p v-if="error && !success">
+        Oops!! An Error occured!!
+      </p>
+      <p v-else-if="success">
+        Yay! Success!!
+      </p>
     </div>
     <script src="app.js"></script>
   </body>
