@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header :title="title" @changeTitle="updateTitle($event)"></app-header>
+    <app-header :title="title"></app-header>
     <doctors :doctors="doctors"></doctors>
     <app-footer :title="title"></app-footer>
   </div>
@@ -29,9 +29,25 @@ export default {
     }
   },
   methods: {
-    updateTitle: function(newTitle){
-      this.title = newTitle;
-    },
+  },
+  //Lifecycle hooks
+  beforeCreate() {
+    alert("Before created");
+  },
+  created() {
+    alert("Created!");
+  },
+  beforeMount() {
+    alert('Before Mount!');
+  },
+  mounted() {
+    alert('Mounted!');
+  },
+  beforeUpdate() {
+    alert('Before Update!');
+  },
+  updated() {
+    alert('Updated!');
   },
 }
 </script>
