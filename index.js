@@ -8,7 +8,4 @@ app.listen(port , () => {
 });
 
 //Serving static files
-app.use(express.static('public'));
-app.get('/index.html', function (req, res) {
-   res.sendFile( __dirname + "/" + "index.html" );
-})
+app.use(express.static(__dirname+'/public'));
