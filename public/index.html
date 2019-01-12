@@ -7,23 +7,15 @@
     <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
-    <div id="app">
-      <h1>Loops</h1>
-      <ul>
-        <li v-for="doctor in doctors">
-          {{doctor.number}} - {{doctor.name}}
-        </li>
-      </ul>
-      <br />
-      <h1>Multiple Looping</h1>
-      <template v-for="(doctor, index) in doctors">
-        <hr/>
-        <template v-for="(val, key) in doctor">
-          <p>
-            {{key}} - {{val}}
-          </p>
-        </template>
-      </template>
+    <h1>Multiple instances</h1>
+    <div id="app-one">
+      <h1>{{title}}</h1>
+      <p>{{greet()}}</p>
+    </div>
+    <div id="app-two">
+      <h1>{{title}}</h1>
+      <p>{{greet()}}</p>
+      <button @click="changeTitle">Change title of app one</button>
     </div>
     <script src="app.js"></script>
   </body>

@@ -1,22 +1,34 @@
-new Vue({
-  el: "#app",
+let one = new Vue({
+  el: "#app-one",
   data: {
-    doctors: [{
-      name: "Joddie Whittaker",
-      number: 13,
-    }, {
-      name: "Peter Capaldi",
-      number: 12,
-    }, {
-      name: "Matt Smith",
-      number: 11,
-    }, {
-      name: "David Tennant",
-      number: 10,
-    }],
+    title: "App one"
   },
   methods: {
+    greet: function(){
+      return "Hello from App one :)";
+    }
+  },
+  computed: {
 
+  },
+  watch: {
+
+  },
+});
+
+
+let two = new Vue({
+  el: "#app-two",
+  data: {
+    title: "App two",
+  },
+  methods: {
+    greet: function(){
+      return "Hello from App two :)";
+    },
+    changeTitle: function(){
+      one.title = "App one with changed title"
+    }
   },
   computed: {
 
