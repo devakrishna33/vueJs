@@ -6,7 +6,11 @@
 </template>
 
 <script>
+import Doctors from './Doctors.vue';
 export default {
+  components: {
+    'doctors': Doctors,
+  },
   data () {
     return {
       title: "First Vue app with cli"
