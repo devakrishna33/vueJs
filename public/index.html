@@ -8,10 +8,12 @@
   </head>
   <body>
     <div id="app">
-      <input :value="name" v-model="name"/>
+      <input v-model="name"/>
       <br/>
       <button @click="changeName">Change name</button>
+      <button @click="changeTitle">Change Title</button>
       <h1>{{ greet() }}</h1>
+      <h1>Reversed name = "{{reverseName}}"</h1>
       <div @mousemove="move" id="canvas">
         {{x}},{{y}}
       </div>

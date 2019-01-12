@@ -12,6 +12,9 @@ new Vue({
     changeName: function(){
       this.name = "River Song";
     },
+    changeTitle: function(){
+      this.name = "Doctor"
+    },
     move: function(event){
       this.x = event.offsetX;
       this.y = event.offsetY;
@@ -20,4 +23,9 @@ new Vue({
       this.name = "Amelia Pond";
     }
   },
+  computed: {
+    reverseName: function(){
+      return this.name.split('').reverse().join('');
+    },
+  }
 });
