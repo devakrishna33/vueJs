@@ -8,15 +8,22 @@
   </head>
   <body>
     <div id="app">
-      <h1>Conditionals</h1>
-      <button @click="error=!error">Toggle Error</button>
-      <button @click="success=!success">Toggle success</button>
-      <p v-if="error && !success">
-        Oops!! An Error occured!!
-      </p>
-      <p v-else-if="success">
-        Yay! Success!!
-      </p>
+      <h1>Loops</h1>
+      <ul>
+        <li v-for="doctor in doctors">
+          {{doctor.number}} - {{doctor.name}}
+        </li>
+      </ul>
+      <br />
+      <h1>Multiple Looping</h1>
+      <template v-for="(doctor, index) in doctors">
+        <hr/>
+        <template v-for="(val, key) in doctor">
+          <p>
+            {{key}} - {{val}}
+          </p>
+        </template>
+      </template>
     </div>
     <script src="app.js"></script>
   </body>
