@@ -2,9 +2,15 @@
   <div>
     <h1>Please fill this form!!!</h1>
     <form>
-      <slot name="form-header"></slot>
-      <slot name="form-fields"></slot>
-      <slot name="form-controls"></slot>
+      <div id="form-header">
+        <h2>Complaint Form</h2>
+        <p>Use this to place a complaint!!!</p>
+      </div>
+      <div id="form-fields">
+        <input type="text" placeholder="subject" required/>
+        <textarea type="text" rows="10" placeholder="complaint" required />
+      </div>
+      <button type="submit">Submit</button>
       <div name="useful-links">
         <ul>
           <li><a href="#">Link 1</a></li>
@@ -20,7 +26,9 @@
 <script>
 export default{
   data() {
-
+    return {
+      
+    }
   },
   methods: {
 

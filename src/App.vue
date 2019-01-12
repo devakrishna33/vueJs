@@ -1,36 +1,28 @@
 <template>
   <div>
-    <form-helper>
-      <div slot="form-header">
-        <h2>This is the form title!!</h2>
-        <p>This is the form description!!!</p>
-      </div>
-      <div slot="form-fields">
-        <input type="text" placeholder="username" required/>
-        <input type="password" placeholder="password" required />
-      </div>
-      <div slot="form-controls">
-        <button type="submit" @click="handleSubmit()">Submit</button>
-      </div>
-    </form-helper>
+    <keep-alive>
+      <component :is="formType"></component>
+    </keep-alive>
+    <button @click="formType='login'">Change to login</button>
+    <button @click="formType='complaint'">Change to complaint</button>
   </div>
 </template>
 
 <script>
-import FormHelper from './components/formHelper.vue';
+import Login from './components/login.vue';
+import Complaint from './components/complaint.vue';
 
 export default {
   components: {
-    'form-helper': FormHelper,
+    'login': Login,
+    'complaint': Complaint,
   },
   data() {
     return {
+      formType: 'login',
     }
   },
   methods: {
-    handleSubmit: {
-
-    }
   },
 }
 </script>
