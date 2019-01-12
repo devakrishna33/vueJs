@@ -5,6 +5,8 @@ new Vue({
     x: 0,
     y: 0,
     message: '',
+    red: true,
+    blue: false,
   },
   methods: {
     greet: function(time){
@@ -22,6 +24,10 @@ new Vue({
     },
     clicked: function(event){
       this.name = "Amelia Pond";
+    },
+    changeColor: function(){
+      this.red = !this.red;
+      this.blue = !this.blue;
     }
   },
   computed: {

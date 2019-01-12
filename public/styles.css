@@ -4,3 +4,15 @@
   width: 600px;
   text-align: center;
 }
+
+.red{
+  background-color: red;
+}
+
+.blue{
+  background-color: blue;
+}
+
+.message{
+  padding: 10px;
+}
