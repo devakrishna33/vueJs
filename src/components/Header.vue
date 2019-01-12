@@ -20,7 +20,7 @@ export default{
   },
   methods: {
     changeTitle: function() {
-      this.title = "Doctor Who!"
+      this.$emit('changeTitle', 'Doctor Who?!');
     }
   }
 }
