@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-header></app-header>
-    <doctors></doctors>
+    <doctors :doctors="doctors"></doctors>
     <app-footer></app-footer>
   </div>
 </template>
@@ -19,6 +19,12 @@ export default {
   },
   data () {
     return {
+      doctors: [
+        {name: 'Joddie Whittaker', speciality: 'Building', show: false, },
+        {name: 'Peter Capaldi', speciality: 'Rage', show: false, },
+        {name: 'Matt Smith', speciality: 'Running', show: false, },
+        {name: 'David Tennant', speciality: 'Hair', show:false, },
+      ],
     }
   },
 }

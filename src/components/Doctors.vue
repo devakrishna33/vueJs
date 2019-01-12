@@ -11,14 +11,15 @@
 
 <script>
   export default{
+    props: {
+      doctors: {
+        type: Array,
+        required: true,
+      }
+    },
     data(){
       return{
-        doctors: [
-          {name: 'Joddie Whittaker', speciality: 'Building', show: false, },
-          {name: 'Peter Capaldi', speciality: 'Rage', show: false, },
-          {name: 'Matt Smith', speciality: 'Running', show: false, },
-          {name: 'David Tennant', speciality: 'Hair', show:false, },
-        ],
+
       }
     }
   };
