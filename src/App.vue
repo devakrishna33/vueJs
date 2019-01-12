@@ -1,25 +1,18 @@
 <template>
   <div>
-    <keep-alive>
-      <component :is="formType"></component>
-    </keep-alive>
-    <button @click="formType='login'">Change to login</button>
-    <button @click="formType='complaint'">Change to complaint</button>
+    <add-blog></add-blog>
   </div>
 </template>
 
 <script>
-import Login from './components/login.vue';
-import Complaint from './components/complaint.vue';
+import AddBlog from './components/addBlog.vue';
 
 export default {
   components: {
-    'login': Login,
-    'complaint': Complaint,
+    'add-blog': AddBlog,
   },
   data() {
     return {
-      formType: 'login',
     }
   },
   methods: {
