@@ -15,6 +15,9 @@ new Vue({
     move: function(event){
       this.x = event.offsetX;
       this.y = event.offsetY;
+    },
+    clicked: function(event){
+      this.name = "Amelia Pond";
     }
   },
 });
