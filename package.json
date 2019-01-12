@@ -1,0 +1,22 @@
+{
+  "name": "vuejs",
+  "version": "1.0.0",
+  "description": "Vue js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devakrishna33/vueJs33.git"
+  },
+  "author": "devakrishna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devakrishna33/vueJs33/issues"
+  },
+  "homepage": "https://github.com/devakrishna33/vueJs33#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
