@@ -1,59 +1,40 @@
 <template>
   <div>
-    <app-header :title="title"></app-header>
-    <doctors :doctors="doctors"></doctors>
-    <app-footer :title="title"></app-footer>
+    <form-helper>
+      <div slot="form-header">
+        <h2>This is the form title!!</h2>
+        <p>This is the form description!!!</p>
+      </div>
+      <div slot="form-fields">
+        <input type="text" placeholder="username" required/>
+        <input type="password" placeholder="password" required />
+      </div>
+      <div slot="form-controls">
+        <button type="submit" @click="handleSubmit()">Submit</button>
+      </div>
+    </form-helper>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
-import Doctors from './components/Doctors.vue';
+import FormHelper from './components/formHelper.vue';
 
 export default {
   components: {
-    'app-header': Header,
-    'doctors': Doctors,
-    'app-footer': Footer,
+    'form-helper': FormHelper,
   },
-  data () {
+  data() {
     return {
-      doctors: [
-        {name: 'Joddie Whittaker', speciality: 'Building', show: false, },
-        {name: 'Peter Capaldi', speciality: 'Rage', show: false, },
-        {name: 'Matt Smith', speciality: 'Running', show: false, },
-        {name: 'David Tennant', speciality: 'Hair', show:false, },
-      ],
-      title: 'Doctor'
     }
   },
   methods: {
-  },
-  //Lifecycle hooks
-  beforeCreate() {
-    alert("Before created");
-  },
-  created() {
-    alert("Created!");
-  },
-  beforeMount() {
-    alert('Before Mount!');
-  },
-  mounted() {
-    alert('Mounted!');
-  },
-  beforeUpdate() {
-    alert('Before Update!');
-  },
-  updated() {
-    alert('Updated!');
+    handleSubmit: {
+
+    }
   },
 }
 </script>
 
-<style>
-  h1{
-    color: green;
-  }
+<style scoped>
+
 </style>
